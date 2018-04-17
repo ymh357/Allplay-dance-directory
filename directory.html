@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #leftPart{
+            padding: 0;
+            background-color: #00b3ee;
+        }
+        .input-group{
+            margin: 5px 5% 5px 5%;
+            background-color: white;
+            width:90%;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        select{
+            width:100%;
+            height:30px;
+            appearance:none;
+            -moz-appearance:none;
+            -webkit-appearance:none;
+            border:0;
+        }
+        input[type="text"]{
+            border:0;
+            width:100%;
+        }
+
+        .nav-pills li{
+            width:15%;
+        }
+        #try{
+            background-color: #00b3ee;
+            border-radius: 0;
+        }
+
+        #submitDiv{
+            text-align: right;
+            height:50px;
+            background-color: gainsboro;
+            vertical-align: sub;
+        }
+
+        button[type='submit']{
+            background-color: gainsboro;
+            border:0;
+        }
+
+        .idLabel{
+            display: block;
+            border-radius: 100%;
+            width:15px;
+            height: 15px;
+            font-size: 10px;
+            text-align: center;
+            background-color: white;
+            border:1px solid black;
+        }
+
+        .greentag{
+            display: inline-block;
+            height:20px;
+            background-color: #67b168;
+            border-radius: 5px;
+            padding:5px;
+        }
+        #result{
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+<ul class="nav nav-pills">
+    <li role="presentation" class="active"><a href="#"  id="try">Search</a></li>
+    <li role="presentation"><a href="#">Guide</a></li>
+</ul>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3" id="leftPart">
+            <div>
+                <div class="input-group">
+                    <label>Child Age Group</label>
+                    <select style="display: block">
+                        <option>All Ages</option>
+                        <option>Kinder Age (Under 6 years old)</option>
+                        <option>Primary School Age (5 to 12 years old)</option>
+                        <option>High School Age (12 to 18 years )</option>
+                    </select>
+                </div>
+                <div class="input-group">
+
+                    <label>Type of sport</label>
+                    <select style="display: block">
+                        <option>All Sports</option>
+                        <option>Basketball</option>
+                        <option>Football</option>
+                        <option>Baseball</option>
+                    </select>
+                </div>
+                <div class="input-group">
+
+                    <label>State</label>
+                    <select style="display: block">
+                        <option>Northern Territory</option>
+                        <option>Queensland</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Postcode</label>
+                    <input type="text" style="display: block" placeholder="Enter postcode (optional)">
+                    </input>
+                </div>
+                <div id="submitDiv">
+                    <button type="submit" id="submit"><b>SEARCH ></b>
+                    </button>
+                </div>
+            </div>
+            <div id="placeholder" style="background-color: white">
+                <p>Find an inclusive sporting program for children with disabilities in Australia. You can search via postcode, state, age group or type of sport.<p>
+
+                <p>If you run an inclusive sporting program and wish to be added to this directory or wish to have your information updated or removed please contact us.</p>
+
+                <p>Although the content of this directory was prepared with due care we do not warrant or represent that the information is free from errors or omission. Whilst the information is considered to be true and correct at the time it was retrieved, changes in circumstances after the time of retrieval may impact on the accuracy of the Information.</p>
+            </div>
+            <div id="result">
+                <!--<div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label class="idLabel">1</label>
+                        </div>
+                        <div class="col-md-8">
+                            <h4>Deakin Dance Studio</h4>
+                            <h5>Burwood, Melbourne, VIC, 3125</h5>
+                            <a style="text-decoration: none">0262640200</a>
+                            <label class="greentag">ALL AGES</label>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#">
+                                <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                                <p>WEBSITE</p>
+                            </a>
+
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9" style="text-align: center">
+            MAPS are showed here.
+        </div>
+    </div>
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+<script>
+    document.getElementById('submit').onclick=function () {
+        document.getElementById('placeholder').style.display = 'none'
+        document.getElementById('result').innerHTML += '<div class="container-fluid">\n' +
+            '                    <div class="row">\n' +
+            '                        <div class="col-md-2">\n' +
+            '                            <label class="idLabel">1</label>\n' +
+            '                        </div>\n' +
+            '                        <div class="col-md-8">\n' +
+            '                            <h4>Deakin Dance Studio</h4>\n' +
+            '                            <h5>Burwood, Melbourne, VIC, 3125</h5>\n' +
+            '                            <a style="text-decoration: none">0262640200</a>\n' +
+            '                            <label class="greentag">ALL AGES</label>\n' +
+            '                        </div>\n' +
+            '                        <div class="col-md-2">\n' +
+            '                            <a href="#">\n' +
+            '                                <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>\n' +
+            '                                <p>WEBSITE</p>\n' +
+            '                            </a>\n' +
+            '\n' +
+            '                        </div>\n' +
+            '                    </div>'
+    }
+</script>
+
+</body>
+</html>
